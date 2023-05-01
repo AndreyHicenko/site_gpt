@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ChatGPT Demo</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/chat">Chat</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<h1>ChatGPT Demo</h1>
+			<p>Welcome to the ChatGPT demo. Enter your message below and get a response from the GPT-3.5-Turbo model.</p>
+			<form action="{{ url_for('chat') }}" method="POST">
+				<input type="text" name="message" placeholder="Enter your message here...">
+				<button type="submit">Send</button>
+			</form>
+			<div class="messages">
+				{% if messages %}
+					{% for message in messages %}
+						<div class="message">
+							<p>{{ message[0] }}</p>
+							<p>{{ message[1] }}</p>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+	</main>
+</body>
+</html>

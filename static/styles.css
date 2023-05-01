@@ -1,0 +1,178 @@
+/* Стиль для всего чата */
+.chat-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f2f3f5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стиль для заголовка чата */
+.chat-header {
+  background-color: #5181b8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* Стиль для тела чата */
+.chat-body {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f2f3f5;
+}
+
+/* Стиль для сообщений в чате */
+.message {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стиль для сообщений модели GPT-3 */
+.message.system {
+  background-color: #e4e6eb;
+  border-radius: 8px;
+  padding: 10px;
+  align-self: flex-start;
+  max-width: 70%;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* Стиль для поля ввода сообщения */
+.chat-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для текстового поля */
+#input-message {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  background-color: #f2f3f5;
+}
+
+/* Стиль для кнопки отправки */
+#send-button {
+  background-color: #5181b8;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Стиль для выделения сообщений от нейросети */
+.message p {
+  background-color: #5181b8;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  align-self: flex-start;
+  margin-right: auto;
+  margin-left: 0;
+  border: 2px solid #c9c9c9;
+
+}
+/* Стиль для сообщений пользователя */
+.message.user {
+padding: 10px;
+border-radius: 30px;
+align-self: flex-end;
+max-width: 70%;
+font-size: 20px;
+line-height: 1.4;
+color: white;
+}
+
+/* Стиль для сообщений модели нейросети */
+.message.bot {
+background-color: #e4e6eb;
+border-radius: 8px;
+padding: 10px;
+align-self: flex-start;
+max-width: 70%;
+font-size: 20px;
+line-height: 1.4;
+}
+
+/* Стиль для прово сообщений в чате */
+.message.bot p {
+background-color: #e4e6eb;
+border-radius: 10px;
+padding: 10px;
+align-self: flex-start;
+margin-right: auto;
+margin-left: 0;
+border: 2px solid #c9c9c9;
+}
+@media only screen and (max-width: 600px) {
+/* Стиль для адаптивности чата на мобильных устройствах */
+.chat-window {
+height: 100%;
+width: 100%;
+font-size: 120%;
+}
+
+/* Стиль для заголовка чата на мобильных устройствах */
+.chat-header {
+height: 10%;
+font-size: 150%;
+}
+
+/* Стиль для тела чата на мобильных устройствах */
+.chat-body {
+padding: 5%;
+}
+
+/* Стиль для сообщений в чате на мобильных устройствах */
+.message.system {
+max-width: 80%;
+font-size: 18px;
+}
+
+/* Стиль для поля ввода сообщения на мобильных устройствах */
+.chat-footer {
+padding: 5% 10%;
+}
+
+/* Стиль для текстового поля на мобильных устройствах */
+#input-message {
+padding: 5%;
+font-size: 18px;
+}
+
+/* Стиль для кнопки отправки на мобильных устройствах */
+#send-button {
+padding: 5% 10%;
+font-size: 18px;
+}
+
+/* Стиль для выделения сообщений от нейросети на мобильных устройствах */
+.message p {
+font-size: 18px;
+padding: 5%;
+border-width: 4px;
+}
+}
